@@ -1,0 +1,993 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+li {
+  list-style: none;
+  float: left;
+}
+i {
+  display: inline-block;
+}
+span {
+  display: inline-block;
+}
+.wrapAll {
+  overflow-x: hidden;
+}
+.head {
+  width: 100%;
+  height: 4.26666667rem;
+  position: relative;
+}
+.head img {
+  width: 100%;
+  height: 100%;
+}
+.head .search {
+  width: 100%;
+  height: 0.93333333rem;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  z-index: 99;
+  justify-content: space-around;
+  align-items: center;
+}
+.head .search .location {
+  width: 1.46666667rem;
+  display: flex;
+  justify-content: space-around;
+}
+.head .search .location i {
+  width: 0.26666667rem;
+  height: 0.30666667rem;
+  background: url(../img/drawable-xhdpi/location.png) no-repeat;
+  background-size: contain;
+}
+.head .search .location a {
+  font-size: 0.26666667rem;
+  color: #ddd;
+}
+.head .search .location a i {
+  width: 0.16rem;
+  height: 0.09333333rem;
+  background: url(../img/drawable-xhdpi/downmore.png) no-repeat;
+  background-size: contain;
+  margin-left: 0.05333333rem;
+}
+.find {
+  width: 6rem;
+  height: 0.66666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(230, 230, 230, 0.9);
+  border-radius: 0.33333333rem;
+}
+.find i {
+  width: 0.34666667rem;
+  height: 0.34666667rem;
+  background: url(../img/drawable-xhdpi/search.png) no-repeat;
+  background-size: contain;
+}
+.find input {
+  width: 72%;
+  text-indent: 0.1rem;
+  border: none;
+  outline: none;
+  font-size: 0.26666667rem;
+  background: none;
+}
+.talk {
+  width: 1.46666667rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.talk a {
+  width: 0.50666667rem;
+  height: 0.46666667rem;
+  background: url(../img/drawable-xhdpi/fankui.png) no-repeat;
+  background-size: contain;
+}
+.talk i {
+  width: 0.45333333rem;
+  height: 0.38666667rem;
+  background: url(../img/drawable-xhdpi/saocode.png) no-repeat;
+  background-size: contain;
+}
+.menuContain {
+  width: 100%;
+  height: 3.50666667rem;
+  background: #F2F2F2;
+  display: flex;
+  align-items: center;
+}
+.menuContain .swiper-container {
+  width: 100%;
+  height: 3rem;
+  background: #fff;
+}
+.menuContain .swiper-container .swiper-wrapper,
+.menuContain .swiper-container .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.menuContain .swiper-container .swiper-pagination-bullet {
+  background: #333;
+  width: 0.13333333rem;
+  height: 0.13333333rem;
+  margin-left: 0.2rem !important;
+}
+.menuContain .swiper-container .swiper-pagination-bullet-active {
+  background: #FDDB48;
+}
+.menuContain .swiper-container ul {
+  width: 100%;
+  height: 2.4rem;
+  display: flex;
+  justify-content: space-around;
+}
+.menuContain .swiper-container ul li {
+  width: 1.33333333rem;
+  height: 100%;
+}
+.menuContain .swiper-container ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menuContain .swiper-container ul li img {
+  width: 1.14666667rem;
+  height: 1.14666667rem;
+}
+.menuContain .swiper-container ul li span {
+  font-size: 0.26666667rem;
+  height: 0.53333333rem;
+  line-height: 0.53333333rem;
+  color: #333;
+}
+@keyframes move1 {
+  from {
+    margin-left: -0.66666667rem;
+  }
+  to {
+    margin-left: 0.8rem;
+  }
+}
+.active {
+  width: 100%;
+  height: 4.53333333rem;
+  position: relative;
+  overflow: hidden;
+}
+.active .title {
+  width: 100%;
+  height: 1.13333333rem;
+  display: flex;
+  align-items: center;
+}
+.active .title h2 {
+  font-size: 0.34666667rem;
+  margin-left: 0.33333333rem;
+}
+.active .title i {
+  width: 0.29333333rem;
+  height: 0.29333333rem;
+  background: url(../img/drawable-xhdpi/laba.png) no-repeat;
+  background-size: contain;
+  margin-left: 0.33333333rem;
+}
+.active .title a {
+  font-size: 0.29333333rem;
+  color: #333;
+  margin-left: 0.33333333rem;
+}
+.active .title div {
+  width: 0.8rem;
+  display: flex;
+  margin-left: 0.13333333rem;
+  overflow: hidden;
+}
+.active .title div a {
+  color: #febbab;
+  margin-left: 0px;
+  animation: move1 1s infinite;
+}
+.active .bgcover {
+  width: 100%;
+  height: 3.26666667rem;
+  position: absolute;
+  top: 1.13333333rem;
+  background: rgba(130, 130, 130, 0.2);
+}
+.active .bg {
+  width: 100%;
+  height: 3.26666667rem;
+  position: relative;
+  background: url(../img/drawable-xhdpi/bluemei.png) no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.active .content {
+  width: 100%;
+  height: 1.73333333rem;
+  position: absolute;
+  top: 1.46666667rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.active .content h1 {
+  color: #fff;
+  height: 0.85333333rem;
+  line-height: 0.85333333rem;
+  font-size: 0.4rem;
+  font-weight: 100;
+  border-top: 0.02666667rem solid #fff;
+  border-bottom: 0.02666667rem solid #fff;
+}
+.active .content a {
+  color: #fff;
+  width: 1.86666667rem;
+  height: 0.4rem;
+  font-size: 0.30666667rem;
+  border: 0.02666667rem solid #fff;
+  text-align: center;
+  line-height: 0.4rem;
+  border-radius: 0.13333333rem;
+}
+.active .cover {
+  position: absolute;
+  width: 120%;
+  height: 1.33333333rem;
+  background: #fff;
+  left: -10%;
+  bottom: -0.66666667rem;
+  border-radius: 100% 100% 0 0;
+}
+.cardOne {
+  width: 100%;
+  height: 11.26666667rem;
+}
+.cardOne .title {
+  width: 3.86666667rem;
+  height: 0.93333333rem;
+  text-align: center;
+  margin: 0px auto;
+  overflow: hidden;
+  border: 0.26666667rem solid transparent;
+  background: url(../img/drawable-xhdpi/outline.png) no-repeat;
+  background-size: 100% 100%;
+  background-origin: border-box;
+}
+.cardOne .title div {
+  background: #FBD42A;
+  width: 3.81333333rem;
+  height: 0.93333333rem;
+  margin-left: 0.04rem;
+  margin-top: -0.02666667rem;
+}
+.cardOne .title h2 {
+  font-size: 0.37333333rem;
+  font-weight: 100;
+  color: #333;
+  margin-top: 0.06666667rem;
+}
+.cardOne .title p {
+  font-size: 0.22666667rem;
+  color: #333;
+}
+.cardOne ul {
+  width: 100%;
+  height: 8.46666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardOne ul li {
+  width: 54%;
+  position: relative;
+  height: 6.66666667rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardOne ul li .connect {
+  position: absolute;
+  background: none;
+  width: 100%;
+  height: 90%;
+}
+.cardOne ul li .name {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.cardOne ul li .name p {
+  font-size: 0.32rem;
+  color: #333;
+}
+.cardOne ul li .name span {
+  font-size: 0.26666667rem;
+  color: #999;
+}
+.cardOne ul li .pic {
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+}
+.cardOne ul li .pic img {
+  width: 3.65333333rem;
+  max-height: 100%;
+}
+.cardOne ul li .pic .img2 {
+  width: 2.84rem;
+  max-height: 100%;
+}
+.cardOne ul li .discrip {
+  font-size: 0.26666667rem;
+  text-align: center;
+  color: #333;
+}
+.cardOne ul li .price {
+  text-align: center;
+}
+.cardOne ul li .price .newprice {
+  font-size: 0.32rem;
+}
+.cardOne ul li .price .newprice big {
+  font-size: 0.46666667rem;
+  line-height: 0.53333333rem;
+  color: #FD663B;
+}
+.cardOne ul li .price .oldprice {
+  font-size: 0.30666667rem;
+  color: #999;
+  text-decoration: line-through;
+}
+.cardOne ul li a {
+  font-size: 0.32rem;
+  width: 2.66666667rem;
+  height: 0.53333333rem;
+  background: #FBD42A;
+  border-radius: 0.26666667rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+.cardOne ul li a i {
+  width: 0.8rem;
+  height: 0.37333333rem;
+  background: url(../img/drawable-xhdpi/gouwuche.png) no-repeat center;
+  background-size: contain;
+}
+.cardOne .more {
+  position: relative;
+  display: block;
+  width: 1.6rem;
+  margin: 0px auto;
+  font-size: 0.29333333rem;
+  color: #444;
+  text-align: center;
+}
+.cardOne .more::after {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 0.22666667rem;
+  right: 0px;
+  top: 0.46666667rem;
+  background: url(../img/drawable-xhdpi/more_bg.png) no-repeat;
+  background-size: contain;
+}
+.dailyLimitContain {
+  width: 100%;
+  height: 13.33333333rem;
+  display: flex;
+  align-items: center;
+  background: #F2F2F2;
+}
+.dailyLimit {
+  width: 100%;
+  height: 12.86666667rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dailyLimit .title {
+  width: 2rem;
+  height: 1.01333333rem;
+  margin: 0px auto;
+  line-height: 1.01333333rem;
+  text-align: center;
+  color: #333;
+  font-size: 0.37333333rem;
+  background: url(../img/drawable-xhdpi/dailyborder.png) no-repeat;
+  background-size: contain;
+}
+.dailyLimit ul {
+  width: 9.06666667rem;
+  height: 11.2rem;
+}
+.dailyLimit ul li {
+  width: 100%;
+  height: 5.33333333rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.dailyLimit ul li .connect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.dailyLimit ul li span {
+  width: 1.86666667rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background: #333;
+  color: #eee;
+  font-size: 0.26666667rem;
+  text-align: center;
+}
+.dailyLimit ul li .title2 {
+  display: flex;
+  justify-content: flex-end;
+}
+.dailyLimit ul li .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.06666667rem;
+}
+.dailyLimit ul li .price span {
+  width: 2.13333333rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background: #333;
+  color: #eee;
+  font-size: 0.26666667rem;
+  text-align: center;
+}
+.dailyLimit ul li .price span small {
+  font-size: 0.21333333rem;
+}
+.dailyLimit ul li .price p {
+  font-size: 0.4rem;
+}
+.dailyLimit ul li .detail {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+.dailyLimit ul li .detail div {
+  width: 50%;
+  height: 2.93333333rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dailyLimit ul li .detail div .img1 {
+  width: 2.49333333rem;
+}
+.dailyLimit ul li .detail div .img2 {
+  width: 2.89333333rem;
+}
+.dailyLimit ul li .detail p {
+  width: 50%;
+  font-size: 0.26666667rem;
+  color: #888;
+  height: 2.26666667rem;
+  line-height: 0.4rem;
+  text-indent: 0.5rem;
+}
+.dailyLimit ul li:first-child {
+  border-bottom: 1px solid #333;
+  box-sizing: border-box;
+}
+@keyframes morefruit {
+  from {
+    bottom: 0.86666667rem;
+  }
+  to {
+    bottom: 0.6rem;
+  }
+}
+.mustBuyContain {
+  width: 100%;
+  height: 19.13333333rem;
+  background: #f2f2f2;
+}
+.mustBuy {
+  width: 100%;
+  height: 18.93333333rem;
+  background: #fff;
+}
+.mustBuy .img {
+  position: relative;
+  height: 3.86666667rem;
+  width: 100%;
+  background: url(../img/drawable-xhdpi/mustbuy1.png) no-repeat center;
+  background-size: cover;
+}
+.mustBuy .img .shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(130, 130, 130, 0.2);
+}
+.mustBuy .img .cover {
+  height: 1.06666667rem;
+  bottom: -0.06666667rem;
+  background: #fff;
+  position: absolute;
+  width: 120%;
+  left: -10%;
+  border-radius: 100% 100% 0 0;
+}
+.mustBuy .title {
+  width: 3.2rem;
+  font-size: 0.29333333rem;
+  text-align: center;
+  margin: 0px auto;
+  position: relative;
+}
+.mustBuy .title h1 {
+  font-weight: 100;
+  font-size: 0.46666667rem;
+}
+.mustBuy .title p {
+  font-size: 0.21333333rem;
+}
+.mustBuy .title:before {
+  content: "[";
+  position: absolute;
+  left: 0px;
+  font-size: 0.6rem;
+  color: #FBD42A;
+}
+.mustBuy .title:after {
+  content: "]";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 0.6rem;
+  color: #FBD42A;
+}
+.mustBuy .fruit {
+  width: 8rem;
+  height: 3.86666667rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px auto;
+  border-bottom: 1px solid #b4b4b4;
+}
+.mustBuy .fruit .image {
+  width: 3.46666667rem;
+  height: 3.2rem;
+}
+.mustBuy .fruit .image a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mustBuy .fruit .image a img {
+  width: 2.93333333rem;
+}
+.mustBuy .fruit .word {
+  height: 1.73333333rem;
+}
+.mustBuy .fruit .word a {
+  width: 100%;
+  height: 100%;
+}
+.mustBuy .fruit .word .price {
+  display: flex;
+  font-size: 0.26666667rem;
+  align-items: flex-end;
+  color: #333;
+}
+.mustBuy .fruit .word .price big {
+  font-size: 0.50666667rem;
+  line-height: 0.53333333rem;
+  color: #FD663B;
+}
+.mustBuy .fruit .word .price small {
+  font-size: 0.26666667rem;
+  color: #999;
+  margin-left: 0.10666667rem;
+  text-decoration: line-through;
+}
+.mustBuy .fruit .word .detail {
+  position: relative;
+  color: #333;
+  margin-left: 0.8rem;
+}
+.mustBuy .fruit .word .detail h3 {
+  font-size: 0.33333333rem;
+  color: #333;
+}
+.mustBuy .fruit .word .detail p {
+  font-size: 0.24rem;
+  color: #333;
+}
+.mustBuy .fruit .word .detail:before {
+  content: "";
+  position: absolute;
+  width: 0.02666667rem;
+  height: 1rem;
+  background: rgba(180, 180, 180, 0.5);
+  left: -0.24rem;
+  top: 0.06666667rem;
+}
+.mustBuy ul {
+  width: 100%;
+  height: 5.06666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mustBuy ul li {
+  width: 3.2rem;
+  height: 3.46666667rem;
+  position: relative;
+}
+.mustBuy ul li a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.mustBuy ul li h3 {
+  font-size: 0.33333333rem;
+  font-weight: 100;
+  color: #333;
+}
+.mustBuy ul li p {
+  font-size: 0.24rem;
+  color: #666;
+}
+.mustBuy ul li .image {
+  height: 1.86666667rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mustBuy ul li .image img {
+  width: 1.6rem;
+}
+.mustBuy ul li .price {
+  display: flex;
+  font-size: 0.21333333rem;
+  align-items: flex-end;
+  justify-content: center;
+  color: #333;
+}
+.mustBuy ul li .price big {
+  font-size: 0.37333333rem;
+  line-height: 0.4rem;
+  color: #FD663B;
+}
+.mustBuy ul li .price small {
+  font-size: 0.21333333rem;
+  color: #999;
+  margin-left: 0.26666667rem;
+  text-decoration: line-through;
+}
+.mustBuy ul li:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 0.02666667rem;
+  height: 2.66666667rem;
+  top: 0.26666667rem;
+  background: rgba(180, 180, 180, 0.4);
+}
+.mustBuy ul li:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 0.02666667rem;
+  height: 2.66666667rem;
+  top: 0.26666667rem;
+  right: 0px;
+  background: rgba(180, 180, 180, 0.4);
+}
+.mustBuy .more {
+  position: relative;
+  display: block;
+  margin: 0px auto;
+  width: 1.33333333rem;
+  height: 0.66666667rem;
+  color: #666;
+  font-size: 0.26666667rem;
+  text-align: center;
+  line-height: 0.66666667rem;
+}
+.mustBuy .more:before {
+  content: "";
+  position: absolute;
+  width: 0.41333333rem;
+  height: 0.4rem;
+  bottom: 0.6rem;
+  left: 0.46666667rem;
+  background: url(../img/drawable-xhdpi/moredown.png) no-repeat;
+  background-size: contain;
+  animation: morefruit 0.8s infinite;
+}
+.moreRecommend div {
+  position: relative;
+  height: 5.33333333rem;
+  display: flex;
+  flex-direction: column;
+}
+.moreRecommend div .recommend {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 4.17333333rem;
+}
+.moreRecommend div .recommend1 {
+  background: url(../img/drawable-xhdpi/more1.png) no-repeat;
+  background-size: contain;
+}
+.moreRecommend div .recommend2 {
+  background: url(../img/drawable-xhdpi/more2.png) no-repeat;
+  background-size: contain;
+}
+.moreRecommend div .recommend3 {
+  background: url(../img/drawable-xhdpi/more3.png) no-repeat;
+  background-size: contain;
+}
+.moreRecommend div .cover {
+  position: absolute;
+  width: 120%;
+  height: 1.2rem;
+  background: #fff;
+  border-radius: 100% 100% 0 0;
+  left: -10%;
+  bottom: 0.26666667rem;
+}
+.moreRecommend div .more {
+  position: relative;
+  display: block;
+  width: 1.6rem;
+  margin: 0px auto;
+  font-size: 0.29333333rem;
+  color: #444;
+  text-align: center;
+}
+.moreRecommend div .more::after {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 0.22666667rem;
+  right: 0px;
+  top: 0.53333333rem;
+  background: url(../img/drawable-xhdpi/more_bg.png) no-repeat;
+  background-size: contain;
+}
+.everyBodyBuy {
+  width: 100%;
+  height: 19.33333333rem;
+}
+.everyBodyBuy .title {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.everyBodyBuy .title div {
+  width: 3.6rem;
+  font-size: 0.29333333rem;
+  text-align: center;
+  position: relative;
+}
+.everyBodyBuy .title div h1 {
+  font-weight: 100;
+  font-size: 0.46666667rem;
+}
+.everyBodyBuy .title div p {
+  font-size: 0.21333333rem;
+}
+.everyBodyBuy .title div:before {
+  content: "[";
+  position: absolute;
+  left: 0px;
+  font-size: 0.6rem;
+  color: #FBD42A;
+}
+.everyBodyBuy .title div:after {
+  content: "]";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 0.6rem;
+  color: #FBD42A;
+}
+.everyBodyBuy ul {
+  width: 100%;
+  height: 15.73333333rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.everyBodyBuy ul li {
+  width: 9.33333333rem;
+  height: 3.86666667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.everyBodyBuy ul li .image {
+  width: 4.13333333rem;
+  height: 100%;
+}
+.everyBodyBuy ul li .image a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.everyBodyBuy ul li .image a img {
+  width: 2.8rem;
+}
+.everyBodyBuy ul li .word {
+  width: 5.06666667rem;
+  height: 2.93333333rem;
+}
+.everyBodyBuy ul li .word .detail {
+  width: 100%;
+}
+.everyBodyBuy ul li .word .detail h3 {
+  font-size: 0.37333333rem;
+  font-weight: 100;
+  color: #333;
+}
+.everyBodyBuy ul li .word .detail p {
+  font-size: 0.29333333rem;
+  color: #666;
+  margin-top: 0.06666667rem;
+}
+.everyBodyBuy ul li .word .detail .price {
+  display: flex;
+  font-size: 0.24rem;
+  align-items: flex-end;
+  color: #333;
+  margin-top: 0.13333333rem;
+}
+.everyBodyBuy ul li .word .detail .price big {
+  font-size: 0.50666667rem;
+  color: #FD663B;
+  line-height: 0.53333333rem;
+}
+.everyBodyBuy ul li .word .detail .price small {
+  font-size: 0.24rem;
+  color: #999;
+  margin-left: 0.2rem;
+  text-decoration: line-through;
+}
+.everyBodyBuy ul li .word .cart {
+  font-size: 0.32rem;
+  width: 2.66666667rem;
+  height: 0.53333333rem;
+  margin-top: 0.06666667rem;
+  background: #FBD42A;
+  border-radius: 0.26666667rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+.everyBodyBuy ul li .word .cart i {
+  width: 0.8rem;
+  height: 0.37333333rem;
+  background: url(../img/drawable-xhdpi/gouwuche.png) no-repeat center;
+  background-size: contain;
+}
+.everyBodyBuy ul li:first-child,
+.everyBodyBuy ul li:nth-child(2),
+.everyBodyBuy ul li:nth-child(3) {
+  border-bottom: 1px solid rgba(180, 180, 180, 0.9);
+}
+.everyBodyBuy .more {
+  position: relative;
+  display: block;
+  width: 1.6rem;
+  margin: 0px auto;
+  font-size: 0.29333333rem;
+  color: #444;
+  text-align: center;
+}
+.everyBodyBuy .more::after {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 0.22666667rem;
+  right: 0px;
+  top: 0.53333333rem;
+  background: url(../img/drawable-xhdpi/more_bg.png) no-repeat;
+  background-size: contain;
+}
+.foot {
+  position: relative;
+  width: 100%;
+  height: 1.86666667rem;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.foot .bg {
+  width: 100%;
+  height: 1.33333333rem;
+  position: absolute;
+  top: 0.26666667rem;
+  background: url(../img/drawable-xhdpi/footbg.png) no-repeat center;
+  background-size: cover;
+}
+.foot .bgcover {
+  width: 100%;
+  height: 1.33333333rem;
+  position: absolute;
+  top: 0.26666667rem;
+  background: rgba(100, 100, 100, 0.3);
+}
+.foot p {
+  font-size: 0.33333333rem;
+  position: relative;
+  color: #fff;
+}
+.box {
+  height: 1.33333333rem;
+}
+.footMenu {
+  width: 100%;
+  height: 1.33333333rem;
+  position: fixed;
+  background: #fff;
+  z-index: 99;
+  bottom: -0.02666667rem;
+  display: flex;
+}
+.footMenu div {
+  height: 1.33333333rem;
+  width: 25%;
+}
+.footMenu div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footMenu div a img {
+  width: 0.69333333rem;
+  height: 0.69333333rem;
+}
+.footMenu div a p {
+  font-size: 0.24rem;
+  color: #333;
+  line-height: 0.46666667rem;
+}

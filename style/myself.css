@@ -1,0 +1,292 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+}
+li {
+  list-style: none;
+  float: left;
+}
+i {
+  display: inline-block;
+}
+body {
+  background: #f2f2f2;
+}
+.footMenu {
+  width: 100%;
+  height: 1.33333333rem;
+  position: fixed;
+  background: #fff;
+  z-index: 99;
+  bottom: -0.02666667rem;
+  display: flex;
+  border-top: 1px solid rgba(180, 180, 180, 0.5);
+}
+.footMenu div {
+  height: 1.33333333rem;
+  width: 25%;
+}
+.footMenu div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footMenu div a img {
+  width: 0.69333333rem;
+  height: 0.69333333rem;
+}
+.footMenu div a p {
+  font-size: 0.24rem;
+  color: #333;
+  line-height: 0.46666667rem;
+}
+.head {
+  width: 100%;
+  height: 6.53333333rem;
+  position: relative;
+  background: #f2f2f2;
+}
+.head .chat {
+  width: 0.50666667rem;
+  height: 0.46666667rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.33333333rem;
+  background: url(../img/drawable-xhdpi/fankuiblack.png) no-repeat;
+  background-size: contain;
+}
+.head .headbg {
+  height: 4.53333333rem;
+  width: 100%;
+  background: #fff;
+}
+.head .headbg img {
+  height: 100%;
+  width: 100%;
+}
+.head .headimg {
+  width: 100%;
+  height: 1.86666667rem;
+  position: absolute;
+  top: 3.2rem;
+  text-align: center;
+}
+.head .headimg div {
+  width: 1.73333333rem;
+  height: 1.73333333rem;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/drawable-xhdpi/headborder.png) no-repeat;
+  background-size: contain;
+}
+.head .headimg div img {
+  width: 1.49333333rem;
+  height: 1.49333333rem;
+  border-radius: 50%;
+}
+.head ul {
+  width: 100%;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+.head ul li {
+  width: 25%;
+  height: 0.93333333rem;
+  position: relative;
+}
+.head ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #333;
+}
+.head ul li a p {
+  font-size: 0.29333333rem;
+}
+.head ul li a span {
+  font-size: 0.25333333rem;
+}
+.head ul li:first-child::after,
+.head ul li:nth-child(2)::after,
+.head ul li:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0.53333333rem;
+  background: #FCDF5F;
+  right: 0px;
+  top: 0.2rem;
+}
+.orderForm {
+  width: 100%;
+  height: 2.73333333rem;
+  background: #f2f2f2;
+}
+.orderForm .order {
+  height: 0.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid #b4b4b4;
+}
+.orderForm .order div {
+  width: 93%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.orderForm .order span {
+  font-size: 0.33333333rem;
+}
+.orderForm .order a {
+  font-size: 0.29333333rem;
+  color: #666;
+}
+.orderForm .order a i {
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url(../img/drawable-xhdpi/rightmore.png) no-repeat;
+  background-size: contain;
+  margin-left: 0.13333333rem;
+}
+.orderForm ul {
+  height: 1.73333333rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.orderForm ul li {
+  height: 100%;
+  width: 20%;
+}
+.orderForm ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.orderForm ul li a img {
+  width: 0.53333333rem;
+  height: 0.53333333rem;
+}
+.orderForm ul li a span {
+  font-size: 0.26666667rem;
+  color: #333;
+  line-height: 0.53333333rem;
+}
+.special {
+  width: 100%;
+  height: 1.93333333rem;
+  background: #f2f2f2;
+}
+.special ul {
+  height: 1.73333333rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.special ul li {
+  height: 100%;
+  width: 25%;
+}
+.special ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.special ul li a img {
+  width: 0.77333333rem;
+  height: 0.77333333rem;
+}
+.special ul li a span {
+  font-size: 0.26666667rem;
+  color: #333;
+  line-height: 0.53333333rem;
+}
+.menu {
+  width: 100%;
+  height: 5.33333333rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: #fff;
+}
+.menu div {
+  width: 96%;
+  height: 1.06666667rem;
+  border-bottom: 1px solid #b4b4b4;
+  box-sizing: border-box;
+}
+.menu div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.menu div div {
+  width: 0.53333333rem;
+  height: 0.49333333rem;
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+.menu div div img {
+  height: 0.50666667rem;
+  max-width: 0.50666667rem;
+}
+.menu div span {
+  font-size: 0.32rem;
+  color: #333;
+  width: 89%;
+  text-indent: 0.5rem;
+}
+.menu div i {
+  width: 0.13333333rem;
+  height: 0.22666667rem;
+  background: url(../img/drawable-xhdpi/righticon.png) no-repeat;
+  background-size: contain;
+}
+.switch {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switch a {
+  font-size: 0.29333333rem;
+  color: #fff;
+  width: 64%;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  background: #D03E2F;
+  text-align: center;
+  border-radius: 0.26666667rem;
+}
+.box {
+  height: 1.33333333rem;
+}
