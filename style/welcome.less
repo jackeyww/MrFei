@@ -1,0 +1,107 @@
+@charset "UTF-8";
+*{margin: 0px;padding: 0px;}
+a{text-decoration: none;display: inline-block;-webkit-tap-highlight-color: transparent;}
+li{list-style: none;float: left;}
+i{display: inline-block;}
+span{display: inline-block;}
+
+@num:75rem;
+
+	html, body {
+      position: relative;
+      height: 100%;
+    }
+	.jump{
+		height:5%;
+		display: flex;
+		justify-content: space-between;
+		align-items:center;
+		a{
+			font-size: 25/@num;
+			color: #333;
+			margin-right: 15/@num;
+		}
+		span{
+			width: 180/@num;
+			height: 50/@num;
+			line-height: 50/@num;
+			text-align: center;
+			font-size: 25/@num;
+			background: #FD663B;
+			color: #fff;
+			border-radius: 50/@num;
+			margin-left: 38%;
+		}
+	}
+
+	.swiper-container{
+		width: 100%;
+		height: 95%;
+		.swiper-wrapper{
+			
+			.swiper-slide{
+				display: flex;
+				flex-direction:column;
+				justify-content: center;
+
+				.image{
+					height: 50%;
+					display: flex;
+					justify-content: center;
+					align-items:center;
+					
+					.img1{
+						width: 556/@num;
+						height: 509/@num;
+					}
+					.img2{
+						width: 528/@num;
+						height: 235/@num;
+					}
+					.img3{
+						width: 438/@num;
+						height: 394/@num;
+					}
+				}
+				.word{
+					height: 50%;
+					text-align: center;
+					h1{
+						font-size: 50/@num;
+						font-weight: 100;
+						text-align: center;
+						color: #FD6F48;
+					}
+					h2{
+						font-size: 30/@num;
+						font-weight: 100;
+						text-align: center;
+						color: #333;
+					}
+					#rightnow{
+						width: 270/@num;
+						height: 50/@num;
+						color: #333;
+						font-size: 28/@num;
+						text-align: center;
+						line-height: 50/@num;
+						border-radius: 25/@num;
+						background: #FAD429;
+						margin-top: 30%;
+					}
+				}
+			}
+		}
+		.swiper-pagination{
+			bottom: 40/@num !important;
+			.swiper-pagination-bullet{
+				width: 50/@num;
+				height: 20/@num;
+				margin-left: 30/@num !important;
+				border-radius: 20/@num;
+			}
+			.swiper-pagination-bullet-active{
+				background: #FD663B;
+			}
+		}
+	}
